@@ -72,7 +72,7 @@ class Customer < ActiveRecord::Base
 end
 
 Runner::TaskHandler.backend = :active_record
-Runner::TaskHandler.serializer = :yaml
+Runner::TaskHandler.serializer = :marshal
 
 # Add this directory so the ActiveSupport autoloading works
 ActiveSupport::Dependencies.autoload_paths << File.dirname(__FILE__)

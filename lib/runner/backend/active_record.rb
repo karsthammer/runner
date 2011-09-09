@@ -1,18 +1,18 @@
 require 'active_record'
 
-class ActiveRecord::Base
-  yaml_as "tag:ruby.yaml.org,2002:ActiveRecord"
-
-  def self.yaml_new(klass, tag, val)
-    klass.find(val['attributes']['id'])
-  rescue ActiveRecord::RecordNotFound
-    nil
-  end
-
-  def to_yaml_properties
-    ['@attributes']
-  end
-end
+# class ActiveRecord::Base
+#   yaml_as "tag:ruby.yaml.org,2002:ActiveRecord"
+# 
+#   def self.yaml_new(klass, tag, val)
+#     klass.find(val['attributes']['id'])
+#   rescue ActiveRecord::RecordNotFound
+#     nil
+#   end
+# 
+#   def to_yaml_properties
+#     ['@attributes']
+#   end
+# end
 
 module Runner
   module Backend
@@ -86,6 +86,6 @@ module Runner
     end
   end
 end
-
+raise "test"
 ActiveRecord::Base.send(:include, Runner::Messaging)
 ActiveRecord::Observer.send(:include, Runner::Messaging)
