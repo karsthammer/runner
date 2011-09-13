@@ -37,7 +37,7 @@ module Runner
           block.call
         end
         
-        Process.detach(child)
+        ::Process.detach(child)
       end
     end
     
