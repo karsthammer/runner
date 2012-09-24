@@ -49,7 +49,7 @@ Gem::Specification.new do |s|
      "spec/task_spawner_spec.rb",
      "spec/yaml_serialization_spec.rb"
   ]
-	s.add_dependency "activesupport", "~> 3.0.10"
+	s.add_dependency "activesupport"
 
   if s.respond_to? :specification_version then
     current_version = Gem::Specification::CURRENT_SPECIFICATION_VERSION
